@@ -7,3 +7,5 @@ def decrypt(key,ciphertext):
     plaintext=""
     #YOUR CODE HERE
     return plaintext
+
+print(9)
