@@ -1,11 +1,20 @@
+
 def encrypt(key,plaintext):
-    ciphertext=""
-    #YOUR CODE HERE
+    
+    ciphertext = ""
+    
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    for letter in plaintext:
+        index = (alphabet.find(letter) + key) % len(alphabet)
+        
+        ciphertext += alphabet[index]
+
     return ciphertext
 
-def decrypt(key,ciphertext):
-    plaintext=""
-    #YOUR CODE HERE
-    return plaintext
 
-print(2222)
+def decrypt(key,ciphertext):
+    
+    plaintext = encrypt(26-key,ciphertext)
+
+    return plaintext
